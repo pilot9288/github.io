@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microicom - Your Technology Partner</title>
+    <style>
+        :root {
+            --primary-color: #0072ff;
+            --secondary-color: #00c6ff;
+            --background-gradient: linear-gradient(to right, #f7f9fc, #e0f7fa);
+            --header-gradient: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--background-gradient); color: #333;
+        }
+        header {
+            background: var(--header-gradient); color: white;
+            padding: 60px 20px; text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 { margin: 0; font-size: 3em; letter-spacing: 1px; }
+        section {
+            padding: 40px 20px; max-width: 1000px; margin: 40px auto;
+            background: white; border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: var(--primary-color); margin-bottom: 20px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px; font-size: 2em;
+        }
+        footer {
+            background: #222; color: #eee;
+            text-align: center; padding: 20px;
+            font-size: 0.9em; margin-top: 40px;
+        }
+        .button {
+            display: inline-block; padding: 12px 25px;
+            background: var(--header-gradient); color: white;
+            text-decoration: none; border-radius: 50px;
+            margin-top: 20px; font-weight: bold;
+            transition: 0.3s; cursor: pointer;
+        }
+        .button:hover {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+        .modal {
+            display: none; position: fixed; z-index: 1000; left: 0; top: 0;
+            width: 100%; height: 100%; overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe; margin: 15% auto; padding: 20px;
+            border: 1px solid #888; width: 80%; max-width: 400px;
+            border-radius: 10px; text-align: center;
+        }
+        .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+        ul { list-style-type: none; padding: 0; margin: 0; }
+        li { padding: 10px 0; font-size: 1.1em; }
+        a { color: var(--primary-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2em; }
+            h2 { font-size: 1.6em; }
+            section { margin: 20px 10px; padding: 20px 15px; }
+            .button { padding: 10px 20px; font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Microicom</h1>
+    <p>Your Technology Partner</p>
+</header>
+<section>
+    <h2>About Us</h2>
+    <p>Microicom helps small businesses simplify and manage their IT, cloud, and online services. We deliver cost-effective solutions, secure cloud hosting, domain management, and technical support for companies worldwide.</p>
+</section>
+<section>
+    <h2>Our Services</h2>
+    <ul>
+        <li>Cloud Hosting & VPS Solutions</li>
+        <li>Domain Registration & DNS Management</li>
+        <li>Website Hosting & Setup</li>
+        <li>Technical Consulting & IT Support</li>
+    </ul>
+</section>
+<section>
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:admin@microicom.com">admin@microicom.com</a></p>
+    <a class="button" onclick="document.getElementById('contactModal').style.display='block'">Get In Touch</a>
+</section>
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="document.getElementById('contactModal').style.display='none'">&times;</span>
+        <h2>Contact Information</h2>
+        <p>Email: <a href="mailto:admin@microicom.com?subject=Inquiry from Website">admin@microicom.com</a></p>
+        <p>Phone: <a href="tel:9518249009">951-824-9009</a></p>
+    </div>
+</div>
+<footer>
+    &copy; 2025 Microicom. All Rights Reserved.
+</footer>
+<script>
+window.onclick = function(event) {
+    var modal = document.getElementById('contactModal');
+    if (event.target == modal) { modal.style.display = "none"; }
+}
+</script>
+</body>
+</html>
